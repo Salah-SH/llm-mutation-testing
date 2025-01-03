@@ -1,0 +1,22 @@
+you are a senior software engineer and a smart contract auditor
+the goal is the develop a test case for solidity contracts.
+this is the solidity contract to test
+``` solidity
+{contract_code}
+
+this is the mutation operation:
+```solidity
+{mutant_code}
+
+the above mutant survived these test cases 
+``` javascript
+{testcases}
+
+
+
+your task is to generate exactly one  test case in javascript to kill the solidity mutant.
+follow the template of the above test cases. the test file should be executed correctly using hardhat
+In mutation testing, the test does not kill the original program but kills the mutant.
+describe the steps you followed to generate the right test case that does fail on the mutant but not on the original contract.
+there are no automatic getter for the internal variables in solidity .
+do not use any proxy contracts. Only use functions that are already defined on the contract

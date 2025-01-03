@@ -1,0 +1,66 @@
+{
+  "name": "token-protocol",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "docker:build": "docker build -t token-protocol .",
+    "docker:start": "docker run -it token-protocol",
+    "compile": "npx hardhat clean && npx hardhat compile",
+    "coverage": "npx hardhat coverage",
+    "test": "npx hardhat test ",
+    "test:jtp": "npx hardhat test ./test/JTP.test.ts",
+    "test:management": "npx hardhat test ./test/JTPmanagement.test.ts",
+    "test:ftas": "npx hardhat test ./test/FanToArtistStaking.test.ts",
+    "test:stake": "npx hardhat test ./test/Stake.test.ts",
+    "test:ve": "npx hardhat test ./test/VotingPower.test.ts",
+    "test:prop": "npx hardhat test ./test/DEXLFactory.test.ts",
+    "test:pool": "npx hardhat test ./test/DEXLPool.test.ts",
+    "test:dao": "npx hardhat test ./test/DAO.test.ts",
+    "test:dexr": "npx hardhat test ./test/DEXLReward.test.ts",
+    "test:int": "npx hardhat test ./test/Integral.test.ts",
+    "deploy:ganache": "npx hardhat run ./scripts/deploy.ts --network localganache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/public-pressure/token-protocol.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/public-pressure/token-protocol/issues"
+  },
+  "homepage": "https://github.com/public-pressure/token-protocol#readme",
+  "dependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.6",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.8",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@nomiclabs/hardhat-ethers": "^2.2.2",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@openzeppelin/contracts": "^4.8.0",
+    "@openzeppelin/contracts-upgradeable": "^4.8.2",
+    "@typechain/ethers-v5": "^10.2.0",
+    "@typechain/hardhat": "^6.1.5",
+    "@types/mocha": "^10.0.1",
+    "chai": "^4.3.7",
+    "chai-subset": "^1.6.0",
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.12.4",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.2",
+    "ts-node": ">=8.0.0",
+    "typechain": "^8.1.1",
+    "typescript": ">=4.5.0"
+  },
+  "resolutions": {
+    "minimatch": "^3.0.5"
+  },
+  "devDependencies": {
+    "@ethersproject/abi": "^5.7.0",
+    "@ethersproject/providers": "^5.7.2",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "web3": "^1.8.2"
+  }
+}

@@ -1,0 +1,22 @@
+# https://github.com/crytic/echidna/wiki/Config
+
+# testMode
+# Description: The test mode to run. It should be one of the following items:
+# "property": Run user-defined property tests.
+# "assertion": Detect assertion failures (previously checkAsserts).
+# "optimization": Find the maximum value for a function.
+# "overflow": Detect integer overflows (only available in Solidity 0.8.0 or greater).
+# "exploration": Run contract code without executing any tests.
+# testMode: assertion
+
+seqLen: 50
+testLimit: 10000
+prefix: "echidna_"
+deployer: "0x30000"
+sender: ["0x10000", "0x20000", "0x30000"]
+propMaxGas: 12500000000
+testMaxGas: 12500000000
+coverage: true
+stopOnFail: true
+deployContracts : [["0x41", "Factory"], ["0x42", "ERC721Tpl"], ["0x43", "ERC20WrapperTpl"]]
+# filterFunctions: ["TplERC20.burn", "TplERC20.mint"]

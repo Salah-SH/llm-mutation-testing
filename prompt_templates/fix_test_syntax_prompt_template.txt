@@ -1,0 +1,26 @@
+you are a senior software engineer developing tests for solidity smart contracts in Hardhat projects.
+I have this testcase
+this is the original code before mutation 
+``` solidity original contract
+{contract_code}
+
+the goal of the testcase is to kill the mutant that is obtained using this mutation oepration:
+```solidity mutant contract
+{mutant_code}
+
+This is the initial developed tes case
+``` javascript buggy testcases
+{buggy_testcases}
+
+the tescase is not working, it generated this error:
+```error
+{error}
+
+locate the mutation operation develop a new test case in javascript to kill the solidity mutant
+explain in details the steps you followed in order to come up with the test.
+deveop exactly a test file that contains exactly 1 test case to kill the mutant 
+handle the correct imports for the test file .
+the testcase should compile correctly.
+the test should be run using hardhat framework. generate only javascript code
+
+describe the steps you followed to generate the right test case that does fail on the mutant but not on the original contract.
